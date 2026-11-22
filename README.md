@@ -1,6 +1,6 @@
 # Harbor Benchmark Adapters
 
-GSM8K v0.2.0 converts all 7,473 train and 1,319 test examples from the pinned OpenAI release to native Harbor tasks. Both splits include a source manifest and a Harbor Registry dataset manifest. The [24-task v0.1.0 preview](https://github.com/stein-wang0226/harbor-benchmark-adapters-source/releases/tag/v0.1.0) remains available.
+GSM8K v0.2.0 converts all 7,473 train and 1,319 test examples from the pinned OpenAI release to native Harbor tasks. Both splits include a source manifest and a Harbor Registry dataset manifest. [Download the v0.2.0 archives and acceptance results](https://huggingface.co/datasets/steinwang/gsm8k-harbor/tree/v0.2.0) · [24-task v0.1.0 preview](https://github.com/stein-wang0226/harbor-benchmark-adapters-source/releases/tag/v0.1.0)
 
 ## Rebuild
 
