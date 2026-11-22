@@ -30,10 +30,12 @@ def archive_task(archive, pilot, task):
 
 
 def write_archive(pilot, destination, manifest):
-    license_path = Path(__file__).with_name("LICENSE.openai")
+    project_license = Path(__file__).resolve().parents[2] / "LICENSE"
+    upstream_license = Path(__file__).with_name("LICENSE.openai")
     with destination.open("xb") as raw, gzip.GzipFile(filename="", fileobj=raw, mode="wb", mtime=0) as gz:
         with tarfile.open(fileobj=gz, mode="w|") as archive:
-            add_bytes(archive, license_path.read_bytes(), "LICENSE.openai")
+            add_bytes(archive, project_license.read_bytes(), "LICENSE")
+            add_bytes(archive, upstream_license.read_bytes(), "LICENSE.openai")
             add_bytes(archive, manifest, "manifest.json")
             for task in json.loads(manifest)["tasks"]:
                 archive_task(archive, pilot, task)

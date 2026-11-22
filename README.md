@@ -21,7 +21,7 @@ shasum -a 256 runs/gsm8k-pilot/manifest.json runs/pilot-tasks.tar.gz
 | Hugging Face v0.1.0 file | SHA-256 |
 | --- | --- |
 | pilot-manifest.json | fdfcae510fb15ed0c6303196ffa92af5409955c4794b3a83618b2a995fa92e17 |
-| pilot-tasks.tar.gz | 4080c74916ed059530a57eb463a9f536382cc7b350d80cde9f358e6f00a75be7 |
+| pilot-tasks.tar.gz | 3e418f1ce9528a93f7bd13e4403806662b4dee79e3356e5ee7d7372b96c12c2f |
 
 The locally generated `manifest.json` corresponds to `pilot-manifest.json` in the dataset release. It lists source rows, Harbor checksums, and SHA-256 for each task file. Tar headers and the gzip timestamp are fixed. If gzip implementations produce different compressed bytes, compare the unpacked manifest and task file hashes.
 
@@ -45,4 +45,4 @@ The agent writes a single decimal number to `/app/output/answer.txt`. Keep the t
 
 ## Licensing
 
-The OpenAI GSM8K source data is covered by the upstream MIT notice. Licensing for the project-authored adapter, templates, and verifier is pending confirmation. [OpenAI license](adapters/gsm8k/LICENSE.openai)
+The project-authored adapter, task templates, and verifier are available under the MIT License. The original GSM8K material retains OpenAI's MIT notice. The task archive includes both notices. [Project license](LICENSE) · [OpenAI license](adapters/gsm8k/LICENSE.openai)
