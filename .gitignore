@@ -1,4 +1,6 @@
 /.venv/
+/.venv-v020/
 /runs/
+/datasets/
 __pycache__/
 .DS_Store

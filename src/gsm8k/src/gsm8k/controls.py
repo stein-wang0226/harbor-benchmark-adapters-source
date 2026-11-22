@@ -27,9 +27,9 @@ class AnswerReplayAgent(BaseAgent):
         key = sha256(instruction.encode()).hexdigest()
         answer = shlex.quote(self.answers[key])
         result = await environment.exec(
-            command="test ! -e /tests/gold.txt && test ! -e /solution/solve.sh "
+            command="test \"$(id -u)\" -eq 1001 && test ! -e /tests/gold.txt && test ! -e /solution/solve.sh "
                     "&& test ! -e /app/output/answer.txt "
                     f"&& printf '%s' {answer} > /app/output/answer.txt",
         )
         if result.return_code != 0:
-            raise RuntimeError("Replay requires a fresh submission path and a private grader and oracle")
+            raise RuntimeError("Replay requires the non-root agent, a fresh output path, and private grader files")

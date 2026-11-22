@@ -1,0 +1,24 @@
+{
+  "version": "v0.2.0",
+  "phase": "native_acceptance",
+  "legacy_acceptance": {
+    "job_state": "drained",
+    "test_controls": 387,
+    "train_controls": 0,
+    "unscored_attempts": 2
+  },
+  "required_controls": {
+    "test": 2641,
+    "train": 14949
+  },
+  "reproduced_manifests": {
+    "test": "d7b62053d87b521bad2bbc1412f8564b5e5ee65a4cb91e25b6aa8ab1515c3c39",
+    "train": "efaab2383e10f9f9d2762e8d06535dc4daeabcf23b0f2f5d2ce0eee08b9cfe42"
+  },
+  "checks": {
+    "harbor_version": "0.27.0",
+    "full_lint_tasks": 8792,
+    "full_lint_findings": 0,
+    "same_digest_smoke": {"podman": {"oracle": 1, "wrong": 0}, "docker": {"oracle": 1, "wrong": 0}}
+  }
+}
