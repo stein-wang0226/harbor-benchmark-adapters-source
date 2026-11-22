@@ -1,24 +1,57 @@
 {
-  "version": "v0.2.0",
-  "phase": "native_acceptance",
+  "checks": {
+    "full_lint_findings": 0,
+    "full_lint_tasks": 8792,
+    "harbor_version": "0.27.0",
+    "same_digest_smoke": {
+      "docker": {
+        "oracle": 1,
+        "wrong": 0
+      },
+      "podman": {
+        "oracle": 1,
+        "wrong": 0
+      }
+    }
+  },
+  "frozen_files_sha256": {
+    "LICENSE": "70029d919eb50205284bf60da3f5dd5d872f0d9d31fbbf66121938af32a2602e",
+    "LICENSE.openai": "893951b3bf94db8df1b13e05da5cdeb499400960e4d44a3962a8b33ed0b4f28e",
+    "README.md": "881d58fc08fc13a9f63f0b641cb8175637303f978adb7ce5ec77ae6113239bc7",
+    "SHA256SUMS": "4c0b1fd2298ba1cad576427cf2ae43c257e26df8a62204cbf16b10b8c320566d",
+    "test-dataset.toml": "32bbbe45ab3742291ed126620c54300933c7b2de40b81fa21711fa768001fd66",
+    "test-manifest.json": "d7b62053d87b521bad2bbc1412f8564b5e5ee65a4cb91e25b6aa8ab1515c3c39",
+    "test-native.json.gz": "fe890c1e67435260239457bfb93ee72676ec02fd15c1f47e0dcd24aa915951f7",
+    "test-tasks.tar.gz": "e46d6513c0d0b6342675d74342aa53b50421f837fdafed0ff49822b401a8859b",
+    "train-dataset.toml": "5fe8a4ff5e83cff693c59022585b991097767d3671f8165eabeb39fb635dedd9",
+    "train-manifest.json": "efaab2383e10f9f9d2762e8d06535dc4daeabcf23b0f2f5d2ce0eee08b9cfe42",
+    "train-native.json.gz": "4730d5dbfb80fabbed942e9157e2b198195fcfbbb67a45bd1005a0529b2eed0d",
+    "train-tasks.tar.gz": "e31ae1c9c2bbadbba5a50f3ce2bc83d501ec52bf2aed93f23c91970dbfea5d4e"
+  },
   "legacy_acceptance": {
     "job_state": "drained",
     "test_controls": 387,
     "train_controls": 0,
     "unscored_attempts": 2
   },
-  "required_controls": {
-    "test": 2641,
-    "train": 14949
-  },
+  "phase": "frozen",
   "reproduced_manifests": {
     "test": "d7b62053d87b521bad2bbc1412f8564b5e5ee65a4cb91e25b6aa8ab1515c3c39",
     "train": "efaab2383e10f9f9d2762e8d06535dc4daeabcf23b0f2f5d2ce0eee08b9cfe42"
   },
-  "checks": {
-    "harbor_version": "0.27.0",
-    "full_lint_tasks": 8792,
-    "full_lint_findings": 0,
-    "same_digest_smoke": {"podman": {"oracle": 1, "wrong": 0}, "docker": {"oracle": 1, "wrong": 0}}
-  }
+  "required_controls": {
+    "test": 2641,
+    "train": 14949
+  },
+  "verified_controls": {
+    "test": {
+      "docker": 2126,
+      "podman": 515
+    },
+    "train": {
+      "docker": 14949,
+      "podman": 0
+    }
+  },
+  "version": "v0.2.0"
 }
